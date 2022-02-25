@@ -11,7 +11,9 @@ import SwiftUI
 struct PlatesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                MovementListView(movementList: MovementList().movementList)
+            }
         }
     }
 }
