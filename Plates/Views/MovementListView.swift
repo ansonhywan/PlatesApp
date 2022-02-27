@@ -27,8 +27,6 @@ struct MovementListView: View {
 
 struct MovementListView_Previews: PreviewProvider {
     static var previews: some View {
-        
-        MovementListView(movementList: MovementList().movementList)
-        
+        MovementListView(movementList: MovementListViewModel().movementList)
     }
 }

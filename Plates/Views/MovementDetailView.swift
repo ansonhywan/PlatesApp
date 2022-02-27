@@ -15,7 +15,6 @@ struct MovementDetailView: View {
                 
                 MovementBasicInfo(movement: movement)
                 
-                
                 ListSubView(header: "Instructions", list: movement.instructions)
                 ListSubView(header: "Primary Muscles", list: movement.primaryMuscles)
                 ListSubView(header: "Secondary Muscles", list: movement.secondaryMuscles)
@@ -50,7 +49,7 @@ struct ListSubView: View {
             Text(header)
                 .font(.title)
                 .bold()
-                .padding(.vertical, 5)
+                .padding(.vertical, 3)
                 .padding(.horizontal)
             ForEach(list, id: \.self) { step in
                 VStack(alignment: .leading){
@@ -63,10 +62,8 @@ struct ListSubView: View {
     }
 }
 
-
-
 struct MovementDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        MovementDetailView(movement: MovementList().movementList.first!)
+        MovementDetailView(movement: MovementListViewModel().movementList.first!)
     }
 }

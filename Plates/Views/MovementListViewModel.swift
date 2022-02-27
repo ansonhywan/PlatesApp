@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MovementList: ObservableObject {
+class MovementListViewModel: ObservableObject {
     let movementList: [Movement]
     init() {
         let url = Bundle.main.url(forResource: "exercises", withExtension: "json")!
