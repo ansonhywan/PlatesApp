@@ -11,7 +11,25 @@ import SwiftUI
 struct PlatesApp: App {
     var body: some Scene {
         WindowGroup {
-            MovementListView(movementList: MovementListViewModel().movementList)
+            TabView {
+                MyWeightsView()
+                    .tabItem {
+                        Image(systemName: "scalemass.fill")
+                        Text("My Weights")
+                    }
+                
+                MovementListView(movementList: MovementListViewModel().movementList)
+                    .tabItem {
+                        Image(systemName: "figure.walk")
+                        Text("Movements")
+                    }
+                
+                // History View
+                
+                
+                
+                // Workout View
+            }
         }
     }
 }
