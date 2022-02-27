@@ -10,17 +10,25 @@ import SwiftUI
 struct MovementListView: View {
     let movementList: [Movement]
     var body: some View {
-        List(movementList, id: \.self) { movement in
-            Text(movement.name)
+        NavigationView {
+            List(movementList, id: \.self) { movement in
+                NavigationLink (
+                    destination: MovementDetailView(movement: movement),
+                    label: {
+                        Text(movement.name)
+                    }
+                )
+            }
+            .listStyle(.inset)
+            .navigationTitle("Movements")
         }
-        .navigationTitle("Movements")
     }
 }
 
 struct MovementListView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            MovementListView(movementList: MovementList().movementList)
-        }
+        
+        MovementListView(movementList: MovementList().movementList)
+        
     }
 }

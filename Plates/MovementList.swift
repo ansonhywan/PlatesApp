@@ -9,7 +9,6 @@ import Foundation
 
 class MovementList: ObservableObject {
     let movementList: [Movement]
-    
     init() {
         let url = Bundle.main.url(forResource: "exercises", withExtension: "json")!
         let data = try! Data(contentsOf: url)
