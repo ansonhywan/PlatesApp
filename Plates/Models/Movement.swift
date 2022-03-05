@@ -19,3 +19,16 @@ struct Movement: Decodable, Hashable {
     let instructions: Array<String>
     let category: String
 }
+
+struct MyMovement: Identifiable {
+    let id = UUID()
+    let name: String
+    var weightReps: Array<WeightReps>
+}
+
+struct WeightReps: Identifiable {
+    let id = UUID()
+    let weight: Int
+    let reps: Int
+}
+

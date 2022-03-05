@@ -18,6 +18,19 @@ struct PlatesApp: App {
                         Text("My Weights")
                     }
                 
+                AddWeightsView(viewModel: AddWeightsViewModel())
+                    .tabItem {
+                        Image(systemName: "scalemass.fill")
+                        Text("Add Weights")
+                    }
+                
+                MyMovementsView()
+                    .tabItem {
+                        Image(systemName: "scalemass.fill")
+                        Text("My Movements")
+                    }
+                
+                
                 MovementListView(movementList: MovementListViewModel().movementList)
                     .tabItem {
                         Image(systemName: "figure.walk")
