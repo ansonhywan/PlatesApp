@@ -20,6 +20,8 @@
 		7A185D8727D1B61700AD02EA /* MyMovementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A185D8627D1B61700AD02EA /* MyMovementsView.swift */; };
 		7A185D8927D1B69600AD02EA /* MyExercises.json in Resources */ = {isa = PBXBuildFile; fileRef = 7A185D8827D1B69600AD02EA /* MyExercises.json */; };
 		7A7B99AE27CC27E6005586D3 /* MyWeightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7B99AD27CC27E6005586D3 /* MyWeightsView.swift */; };
+		7AD37D3927D51F46004C7BD8 /* UserMovement.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7AD37D3727D51F46004C7BD8 /* UserMovement.xcdatamodeld */; };
+		7AD37D3B27D51FE6004C7BD8 /* UserMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD37D3A27D51FE6004C7BD8 /* UserMovement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		7A185D8627D1B61700AD02EA /* MyMovementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMovementsView.swift; sourceTree = "<group>"; };
 		7A185D8827D1B69600AD02EA /* MyExercises.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MyExercises.json; sourceTree = "<group>"; };
 		7A7B99AD27CC27E6005586D3 /* MyWeightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWeightsView.swift; sourceTree = "<group>"; };
+		7AD37D3827D51F46004C7BD8 /* UserMovements.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserMovements.xcdatamodel; sourceTree = "<group>"; };
+		7AD37D3A27D51FE6004C7BD8 /* UserMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMovement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				7A133DA327C8566500CC8B61 /* Movement.swift */,
+				7AD37D3A27D51FE6004C7BD8 /* UserMovement.swift */,
+				7AD37D3727D51F46004C7BD8 /* UserMovement.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,6 +195,8 @@
 				7A185D8527D1AB0300AD02EA /* AddWeightsViewModel.swift in Sources */,
 				7A185D8327D1A6E900AD02EA /* AddWeightsView.swift in Sources */,
 				7A7B99AE27CC27E6005586D3 /* MyWeightsView.swift in Sources */,
+				7AD37D3B27D51FE6004C7BD8 /* UserMovement.swift in Sources */,
+				7AD37D3927D51F46004C7BD8 /* UserMovement.xcdatamodeld in Sources */,
 				7A133DA427C8566500CC8B61 /* Movement.swift in Sources */,
 				7A185D8727D1B61700AD02EA /* MyMovementsView.swift in Sources */,
 			);
@@ -393,6 +401,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7AD37D3727D51F46004C7BD8 /* UserMovement.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7AD37D3827D51F46004C7BD8 /* UserMovements.xcdatamodel */,
+			);
+			currentVersion = 7AD37D3827D51F46004C7BD8 /* UserMovements.xcdatamodel */;
+			path = UserMovement.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7A133D8A27C84B1C00CC8B61 /* Project object */;
 }

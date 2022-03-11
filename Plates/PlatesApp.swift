@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct PlatesApp: App {
+    @StateObject private var dataController = DataController()
     var body: some Scene {
         WindowGroup {
             TabView {
@@ -23,12 +24,14 @@ struct PlatesApp: App {
                         Image(systemName: "scalemass.fill")
                         Text("Add Weights")
                     }
+                    .environment(\.managedObjectContext, dataController.container.viewContext)
                 
                 MyMovementsView()
                     .tabItem {
                         Image(systemName: "scalemass.fill")
                         Text("My Movements")
                     }
+                    .environment(\.managedObjectContext, dataController.container.viewContext)
                 
                 
                 MovementListView(movementList: MovementListViewModel().movementList)

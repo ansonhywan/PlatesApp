@@ -10,34 +10,42 @@ import SwiftUI
 struct AddWeightsView: View {
     @StateObject var viewModel: AddWeightsViewModel
     @State private var movementName = ""
-    @State private var weight = ""
-    @State private var reps = ""
-    @State private var repsInReserve = ""
     
     var body: some View {
         NavigationView {
+            //VStack {
             Form {
                 Section (header: Text("Movement")) {
                     TextField("Movement Name", text: $movementName)
                 }
                 Section (header: Text("Weights")) {
-                    ForEach (viewModel.weightRepsList, id: \.id) { weightReps in
+                    ForEach (viewModel.weightRepsRIRList.indices, id:\.self) { currentSet in
                         HStack {
-                            TextField("Weight (lbs)", text: $weight)
+                            TextField("Weight (lbs)", value: $viewModel.weightRepsRIRList[currentSet].weight, formatter: NumberFormatter())
                                 .keyboardType(.numberPad)
-                            TextField("Reps", text: $reps)
+                            TextField("Reps", value: $viewModel.weightRepsRIRList[currentSet].reps, formatter: NumberFormatter())
                                 .keyboardType(.numberPad)
-                            TextField("RIR", text: $repsInReserve)
+                            TextField("RIR", value: $viewModel.weightRepsRIRList[currentSet].repsInReserve, formatter: NumberFormatter())
                                 .keyboardType(.numberPad)
                         }
                     }
                     Button("Add Weight") {
-                        viewModel.addNewWeightReps()
+                        viewModel.addSet()
                     }
                     
+                    
+                    
+                }
+                Section (footer: Button("Done") {
+                    print(viewModel.weightRepsRIRList)
+                }
+                            .font(.system(.body))) {
+                    EmptyView()
                 }
                 
             }
+            
+            //}
             .navigationTitle("New Weight")
         }
     }

@@ -23,12 +23,13 @@ struct Movement: Decodable, Hashable {
 struct MyMovement: Identifiable {
     let id = UUID()
     let name: String
-    var weightReps: Array<WeightReps>
+    var weightRepsRIR: Array<WeightRepsRIR>
 }
 
-struct WeightReps: Identifiable {
-    let id = UUID()
-    let weight: Int
-    let reps: Int
+struct WeightRepsRIR: Identifiable {
+    let id = UUID() // Same ID as the UserMovement it is associated to.
+    var weight: Int?
+    var reps: Int?
+    var repsInReserve: Int?
 }
 

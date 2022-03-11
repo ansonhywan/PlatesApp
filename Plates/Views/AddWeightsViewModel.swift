@@ -8,19 +8,25 @@
 import Foundation
 
 class AddWeightsViewModel: ObservableObject{
-    @Published var weightRepsList: [WeightReps]
+    @Published var weightRepsRIRList: [WeightRepsRIR]
     
     init() {
-        self.weightRepsList = []
+        self.weightRepsRIRList = []
     }
     
-    func addNewWeightReps() {
-        print("In addNewWeightReps()")
-        weightRepsList.append(WeightReps(weight: 0, reps: 0))
+    func addSet() {
+        print("In addSet()")
+        weightRepsRIRList.append(WeightRepsRIR())
     }
     
-    func updateMyMovement() {
+    func updateWeightRepsRIRList(WeightRepsRIRList: [WeightRepsRIR]) {
+        print("In updateWeightRepsRIRList()")
+        //weightRepsRIRList.append(WeightRepsRIR(weight: WeightRepsRIRList[currentSet].weight, reps: WeightRepsRIRList[currentSet].reps, repsInReserve: WeightRepsRIRList[currentSet].repsInReserve))
+        
+    }
+    
+    func updateMyMovement(Movement: String) {
         print("In updateMyMovement()")
+        
     }
-    
 }
